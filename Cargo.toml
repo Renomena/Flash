@@ -1,3 +1,8 @@
+[package]
+name = "Reno's Flash"
+version = "0.1.0"
+edition = "2024"
+
 [dependencies]
 eframe = "0.23"
 egui = "0.23"
