@@ -26,11 +26,8 @@ impl FlashApp {
 
             // Butonlar
             ui.add(egui::Button::new("Bots"));
-            ui.add(egui::Button::new("Item Database"));
-            ui.add(egui::Button::new("Proxy"));
             ui.add(egui::Button::new("Settings"));
             ui.add(egui::Button::new("+ Add Bot"));
-            ui.add(egui::Button::new("- Remove Bot"));
         });
     }
 }
