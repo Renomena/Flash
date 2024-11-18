@@ -4,14 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+winapi = { version = "0.3", features = ["winuser", "windef"] }
 eframe = "0.23"
 egui = "0.23"
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-reqwest = { version = "0.11", features = ["blocking", "json"] }
-tokio = { version = "1", features = ["full"] }
-ron = "0.8"
-chrono = "0.4"
-rand = "0.8"
-egui_extras = "0.23"
-epaint = "0.23"
