@@ -1,23 +1,22 @@
-use eframe::egui::{self, CentralPanel, TopBottomPanel, Context};
+use eframe::egui::{self, CentralPanel, TopBottomPanel, Context, Layout, Ui};
 
 fn main() -> Result<(), eframe::Error> {
     let options = eframe::NativeOptions::default();
     eframe::run_native(
         "Flash",
         options,
-        Box::new(|_cc| Box::new(Flash::new())),
+        Box::new(|_cc| Box::new(FlashApp::new())),
     )
 }
 
-struct Flash;
+struct FlashApp;
 
-impl Flash {
+impl FlashApp {
     fn new() -> Self {
         Self {}
     }
-}
 
-fn render_custom_bar(ui: &mut Ui) {
+    fn render_custom_bar(ui: &mut Ui) {
         // Özel bar tasarımı
         ui.horizontal(|ui| {
             ui.spacing_mut().item_spacing.x = 10.0; // Butonlar arasındaki boşluk
@@ -36,13 +35,12 @@ fn render_custom_bar(ui: &mut Ui) {
     }
 }
 
-
-impl eframe::App for Flash {
+impl eframe::App for FlashApp {
     fn update(&mut self, ctx: &Context, _frame: &mut eframe::Frame) {
-            TopBottomPanel::top("header").show(ctx, |ui| {
+        TopBottomPanel::top("header").show(ctx, |ui| {
             FlashApp::render_custom_bar(ui);
         });
-        
+
         CentralPanel::default().show(ctx, |ui| {
             ui.label("Welcome to Flash!");
         });
