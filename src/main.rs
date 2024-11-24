@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use eframe::egui::{self, CentralPanel, TopBottomPanel, Context, Layout, Ui};
 
 fn main() -> Result<(), eframe::Error> {
